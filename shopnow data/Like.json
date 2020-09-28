@@ -1,0 +1,28 @@
+[{
+  "_id": {
+    "$oid": "5ee1cd94c76a0b365ce2f33d"
+  },
+  "User": "Milan",
+  "Productid": "5eda325e214c9235a4ce4e94",
+  "Productname": "Macbook-Air",
+  "Action": "Like",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5ee1cdacc76a0b365ce2f33e"
+  },
+  "User": "Milan",
+  "Productid": "5eda378fe0686e11188fc70a",
+  "Productname": "T-shirt",
+  "Action": "Like",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5ee33730c796100dc4880c4d"
+  },
+  "User": "Milan",
+  "Productid": "5edb83712e56023a2c8a0877",
+  "Productname": "Watch",
+  "Action": "Like",
+  "__v": 0
+}]

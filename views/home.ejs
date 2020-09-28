@@ -1,0 +1,287 @@
+<html>
+    <head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<!--
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
+-->
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<meta name="Keywords" content="Online Shopping in India,online Shopping store,Online Shopping Site,Buy Online,Shop Online,Online Shopping,Shop Now">
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="Description" content="India's biggest online store for Mobiles, Fashion (Clothes/Shoes), Electronics, Home Appliances, Books, Home, Furniture, Grocery, Jewelry, Sporting goods, Beauty & Personal Care and more! 
+		Find the largest selection from all brands at the lowest prices in India. Payment options - COD, EMI, Credit card, Debit card &amp; more.">
+</head>
+<title>Online Shopping in India,online Shopping store,Online Shopping Site,Buy Online,Shop Online,Online Shopping,Shop Now</title>
+<style>
+		.delete_btn{
+		color: white;
+		padding: 6px 5px; 
+		margin: 5px auto; 
+		border: 2px solid black;
+		border-radius:10px;
+		cursor: pointer; 
+		width: 80px;
+		}
+		.delete_btn:hover{
+			opacity:0.8;
+		}
+			table td a
+		{
+			text-decoration:none;
+		}
+		table td a:hover
+		{
+			border-bottom:1px solid white;
+        }
+        ul{
+        padding: 0;
+		margin: 0;
+        list-style: none;
+        background: #555555;
+    }
+    ul li{
+        display: inline-block;
+		position : relative;
+        text-align: left;
+    }
+    ul li a{
+		display:block;
+        padding: 20px 16px;
+        color: white;
+        text-decoration: none;
+    }
+	ul .active {
+		background-color:#4CAF50;
+	}
+    ul li a:hover{
+		background-color: #4CAF50;
+    }
+    ul li ul.dropdown{
+        min-width: 100%;
+        background: #555555;
+        display: none;
+        position: absolute;
+        z-index: 999;
+        left: 0;
+    }
+    ul li:hover ul.dropdown{
+        display: block;
+    }
+    ul li ul.dropdown li{
+        display: block;
+    }
+            .mySlides {display: none;}
+            img {vertical-align: middle;}
+
+            .slideshow 
+            {	
+            max-width: 1200px;
+            position: relative;
+            margin: auto;
+            padding:3px;
+            }
+            .dot
+            {
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+            }
+            .active
+            {
+            background-color: #4CAF50;
+            }
+            .fade
+            {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+            }
+            @-webkit-keyframes fade
+            {
+            from {opacity: .4} 
+            to {opacity: 1}
+            }
+            @keyframes fade 
+            {
+            from {opacity: .4} 
+            to {opacity: 1}
+            }
+            @media only screen and (max-width: 300px) 
+            {
+            .text {font-size: 11px}
+            }
+            .fa-thumbs-down
+            {
+            transform:rotateY(180deg);
+            } 
+</style>
+<body>
+    <% if(msgg) { %>
+        <script type="text/javascript">
+			alert('You are not Login')
+        </script>
+    <% } %>
+    <div>
+        <h1 style="text-align:center;width:100%;background-color:orange;line-height:70px;margin:0px;">Welcome
+            <% if(username) { %><%= username %><% } else { %><%= msg  %><% } %></h1>
+
+        </div>
+    <div style="height:70px;">
+        <div>
+            <ul>
+              <li><a href="/shopnow/user/home" class="active"><i class="fa fa-home" style="font-size:22px;"></i>&nbsp;&nbsp;<font style="font-size:20px;">Home</font></a>
+                <ul class="dropdown">
+                    <li><a href="/shopnow/user/electronic">Electronics</a></li>
+                    <li><a href="/shopnow/user/men-women-fashion">Men,Women Fashion</a></li>
+                    <li><a href="/shopnow/user/beauty-health-grocery">Beauty,Health,Grocery</a></li>
+                    <li><a href="/shopnow/user/sports-fitness">Sports,Fitness</a></li>
+                    <li><a href="/shopnow/user/toy-babyproduct-kidsfashion">Toy,Baby Product,Kid's Fashion</a></li>
+                    <li><a href="/shopnow/user/car-motorBike-industriyal">Car,MotorBike,Industriyal</a></li>
+                </ul>
+                </li>
+              <li><a href="/shopnow/user/profile">
+              <i class="fa fa-address-card" style="font-size:20px;"></i>&nbsp;&nbsp;<font  style="font-size:20px;">Profile</font></a></li>
+              <li><a href="/shopnow/user/cart">
+              <i class="fa fa-shopping-cart" style="font-size:20px;"></i>&nbsp;&nbsp;<font style="font-size:20px;">Cart</font></a></li>
+              <li><a href="/shopnow/user/order">
+              <i class="fa fa-truck" style="font-size:20px;"></i>&nbsp;&nbsp;<font style="font-size:20px;">Order</font></a></li>
+              <% if(username){ %>
+                <li style="float:right"><a href="/shopnow/user/logout">
+                  <i class="fa fa-sign-out" style="font-size:20px;"></i>&nbsp;&nbsp;<font style="font-size:20px;">Logout</font></a></li>
+              <% } else { %>
+                  <li style="float:right"><a href="/shopnow/user/login-page">
+                      <i class="fa fa-lock" style="font-size:20px;"></i>&nbsp;&nbsp;<font style="font-size:20px;">Login</font></a></li>        
+                 <% } %>
+                </ul>
+            </div>
+        </div>
+
+          <div>
+            <center>
+            <form action="/search" method="post">
+                <input type="text" name="user" id="searchname" style="line-height: 27px;border: 2px solid red; border-radius:10px;" placeholder="Enter Product Name">
+                <input class="delete_btn" type="submit" style="font-size:15px; background-color: green;" name="sub" value="Search">
+            </form>
+            </center>
+          </div>
+
+
+            <div class="slideshow">
+
+                <div class="mySlides fade">
+                  <img src="/Uploads/image.jpeg" alt="Trending Image" style="width:1200px; height:600px;">
+                </div>
+                
+                <div class="mySlides fade">
+                  <img src="/Uploads/image2.jpeg" alt="Trending Image" style="width:1200px; height:600px;">
+                </div>
+                
+                <div class="mySlides fade">
+                  <img src="/Uploads/image3.jpeg" alt="Trending Image" style="width:1200px; height:600px;">
+                </div>
+                
+                </div>
+                <br>
+                
+                <div style="text-align:center">
+                  <span class="dot"></span> 
+                  <span class="dot"></span> 
+                  <span class="dot"></span> 
+                </div>
+
+
+
+
+<table style="width:100%;height:auto;overflow:hidden;">
+  <div style="width:100%;font-size: 70px;">
+    <% if(records){ %><% records.forEach(function(row) { %>
+    <th>
+			<td>
+			<img src="/Uploads/<%= row.Image %>" width="293px" height="293px" alt="Product Image"></img>
+			<h3>Product:-<b style="color:red; font-size:20px;"><%= row.Product %></b></h3>
+			<h3>Brand:-<b style="color:red; font-size:20px;"><%= row.Brand %></b></h3>
+			<h3>Price:-<b style="color:red; font-size:20px;"><%= row.Price %></b></h3>
+			<a href="/shopnow/user/detail/<%= row._id %>"><button style="background-color:#4CAF50; font-size:15px; width:250px" value="Click Here For More Details"
+			name="fetch_btn" class="delete_btn"><b>Click Here For More Details</b></button></a>
+			</td>
+    </th>
+    <% })} %>
+  </div>
+</table>
+
+<% for(var c=1; c<=2; c++){ %>
+<a href="/shopnow/user/home"><button style="background-color:#4CAF50; font-size:15px; width:auto;" class="delete_btn">
+  <b><%= c %></b></button></a>
+<% } %>
+
+
+<%- include('fotter.ejs') -%>
+
+<script type="text/javascript">
+    var slideIndex = 0;
+    showSlides();
+    
+    function showSlides() 
+    {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) 
+      {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length)
+          {
+              slideIndex = 1
+          }    
+      for (i = 0; i < dots.length; i++)
+          {
+        dots[i].className = dots[i].className.replace(" active", "");
+          }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 3000); 
+    }
+        
+    </script>
+
+<script>
+  $(function(){
+      $('#searchname').autocomplete({
+          source:function(req,res){
+              $.ajax({
+                  url:'Autocomplete/',
+                  dataType:'jsonp',
+                  type:'GET',
+                  data:req,
+                  success:function(data){
+                      res(data);
+                  },
+                  error:function(err){
+                      res.json('Error In Search');
+                  }
+              });
+          },
+          /*
+          minLength:1,
+          select: function(event,ui){
+              if(ui.item){
+                  $('#searchName').val(ui.item.label);
+              }
+          }
+          */
+      });
+
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,96 @@
+<html> 
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>ShopNow.com</title>
+<style> 
+	input[type=text], 
+	input[type=password] { 
+		width: 100%; 
+		padding: 12px 20px; 
+		margin: 8px 0; 
+		display: inline-block; 
+		border: 1px solid #ccc; 
+		box-sizing: border-box; 
+	}  
+	.sub_btn{ 
+		background-color: #4CAF50; 
+		color: white;
+		padding: 10px 20px; 
+		margin: 0 auto; 
+		border: none; 
+		cursor: pointer; 
+		width: 100%;
+	}
+		
+	.back_btn{ 
+		background-color: #4CAF50; 
+		color: white; 
+		padding: 14px 20px; 
+		background-color: red;
+		margin: 8px 0; 
+		border: none; 
+		cursor: pointer; 
+		width: 100%;; 
+	}
+	
+	.sub_btn:hover { 
+		opacity: 0.8; 
+	} 
+	.back_btn:hover { 
+		opacity: 0.8; 
+	} 
+	.container { 
+		padding: 6px; 
+		width:500px;
+		margin:0 auto;
+		border:2px solid #2c3e50;
+		border-radius:10px;
+		box-shadow: 20px 20px 20px 20px rgba(255,255,255,0.2);
+		background-color:white;
+	} 
+	@media screen and (max-width: 300px) { 
+		span.psw { 
+			display: block; 
+			float: none; 
+		} 
+	}
+</style>
+	<script type="text/javascript">
+	function show()
+	{
+		var x=document.getElementById('pass');
+		if(x.type=="password")
+		{
+			x.type="text";
+		}
+		else
+		{
+			x.type="password";
+		}
+	}
+	</script>
+</head>
+<body style="background-color:#7f8c8d">	
+	<div style="width:540px;  margin:0 auto; ">
+		<div class="container">
+	    <form action="/homepage" method="POST">
+			<div>
+			<h1><center>Seller Login Page</center></h1>
+			<label><b>Username</b></label> 
+			<input type="text" placeholder="Enter Username" name="username" required >
+			<label><b>Password</b></label>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<i class="fa fa-eye" style="cursor: pointer;" onclick="show()">&nbsp;<span style="color:red;">Show password</span></i>
+			<input type="password" id="pass" placeholder="Enter Password" name="password" required>
+			<span>Click Here To <a href="#" style="text-decoration:none; color:red;">Forgot Password?</a></span><br>
+			<span>Click Here To <a href="/login" style="text-decoration:none; color:red;">Login As User</a></span><br>&nbsp; 
+			<input class="sub_btn" type="submit" style="font-size:20px;" name="login" placeholder="Login" value="Login">
+			<a href="/sellerresiter"><input class="back_btn" type="button" style="font-size:20px;" value="Resiter"></a>
+			</div>
+		</form>
+	</div>
+	</div>
+</body>
+</html> 

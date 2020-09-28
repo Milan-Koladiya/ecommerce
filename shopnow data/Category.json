@@ -1,0 +1,91 @@
+[{
+  "_id": {
+    "$oid": "5eda325e214c9235a4ce4e94"
+  },
+  "Date": {
+    "$date": "2020-06-05T11:54:06.925Z"
+  },
+  "Seller": "milan",
+  "Category": "Electronics",
+  "Product": "Macbook-Air",
+  "Brand": "Apple",
+  "Price": 90000,
+  "Description": "This laptop is made special in apple,its contain 1GB  of ram and 1TB of harddiak with made highly processor and 1 year warrenty.. ",
+  "Image": "macbook.jfif",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5eda378fe0686e11188fc70a"
+  },
+  "Date": {
+    "$date": "2020-06-05T12:16:15.756Z"
+  },
+  "Seller": "milan",
+  "Category": "Men,Women Fashion",
+  "Product": "T-shirt",
+  "Brand": "Nike",
+  "Price": 2500,
+  "Description": "This t-shirt is made with 98% cotton and 2% febric..",
+  "Image": "nike teshirt - Copy.jfif",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5edb31a8debdf50b087c21f8"
+  },
+  "Date": {
+    "$date": "2020-06-06T06:03:20.540Z"
+  },
+  "Seller": "milan",
+  "Category": "Electronics",
+  "Product": "Insprion-Laptop",
+  "Brand": "Dell",
+  "Price": 47000,
+  "Description": "It's contain 8 GB of ram and 1TB of hardisk,180GB SSD harddisk and DDR4 Ram and 1year Of Warrenty...",
+  "Image": "dell laptop.jfif",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5edb83712e56023a2c8a0877"
+  },
+  "Date": {
+    "$date": "2020-06-06T11:52:17.585Z"
+  },
+  "Seller": "milan",
+  "Category": "Electronics",
+  "Product": "Watch",
+  "Brand": "G-Shock",
+  "Price": 7500,
+  "Description": "This watch is best watch and 1 year of warrenty and made with mettel...",
+  "Image": "G-sock.png",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5eddd2ad28a16447b0fc4466"
+  },
+  "Date": {
+    "$date": "2020-06-08T05:54:53.594Z"
+  },
+  "Seller": "milan",
+  "Category": "Beauty,Health,Grocery",
+  "Product": "Shampoo",
+  "Brand": "Dove",
+  "Price": 250,
+  "Description": "This shampoo is antidrendrafull and made with milk and no side effect will ocuuered in our head...",
+  "Image": "dove shampoo.jpeg",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5ee2ea2e8dacbb20b850f074"
+  },
+  "Date": {
+    "$date": "2020-06-12T02:36:30.901Z"
+  },
+  "Seller": "piyush",
+  "Category": "Electronics",
+  "Product": "T.V",
+  "Brand": "marq",
+  "Price": 95000,
+  "Description": "This is best tv and screen also best..",
+  "Image": "image4.jpeg",
+  "__v": 0
+}]

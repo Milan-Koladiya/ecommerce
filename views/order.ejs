@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <style>
+            .delete_btn{
+		color: white;
+		padding: 10px 20px; 
+		margin: 5px auto; 
+		border: 2px solid black;
+		border-radius:10px;
+		cursor: pointer; 
+		width: 100px;
+		}
+		.delete_btn:hover{
+			opacity:0.8;
+		}
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1 style="text-align:center;width:100%;background-color:orange;line-height:70px;margin:0px;">Welcome
+                <% if(username) { %><%= username %><% } else { %><%= msg  %><% } %></h1>
+        </div>
+        <% if(msgg) { %>
+            <script type="text/javascript">
+                alert('You are not Login');
+            </script>
+            <a href="/shopnow/user/login-page"><button style="background-color:#4CAF50; font-size:15px; width:300px;" class="delete_btn"><b>Click Here To Login</b></button></a>
+        <% } %>
+        <% if(username){ %>
+        <div>
+            <h2>Your Order Id&nbsp;:-&nbsp;</h2>
+        </div>
+        <% } %>
+    </body>
+</html>

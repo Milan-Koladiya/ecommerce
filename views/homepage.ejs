@@ -1,0 +1,168 @@
+<html>
+    <head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
+-->
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<meta name="Keywords" content="Online Shopping in India,online Shopping store,Online Shopping Site,Buy Online,Shop Online,Online Shopping,Shop Now">
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="Description" content="India's biggest online store for Mobiles, Fashion (Clothes/Shoes), Electronics, Home Appliances, Books, Home, Furniture, Grocery, Jewelry, Sporting goods, Beauty & Personal Care and more! 
+		Find the largest selection from all brands at the lowest prices in India. Payment options - COD, EMI, Credit card, Debit card &amp; more.">
+</head>
+<title>Online Shopping in India,online Shopping store,Online Shopping Site,Buy Online,Shop Online,Online Shopping,Shop Now</title>
+<style>
+		.delete_btn{
+		color: white;
+		padding: 6px 5px; 
+		margin: 5px auto; 
+		border: 2px solid black;
+		border-radius:10px;
+		cursor: pointer; 
+		width: 80px;
+		}
+		.delete_btn:hover{
+			opacity:0.8;
+		}
+			table td a
+		{
+			text-decoration:none;
+		}
+		table td img:hover
+		{
+			transform: scale(1.5);
+            transition: transform 0.2s;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+        }
+        
+        ul{
+        padding: 0;
+		margin: 0;
+        list-style: none;
+        background: #555555;
+    }
+    ul li{
+        display: inline-block;
+		position : relative;
+        text-align: left;
+    }
+    ul li a{
+		display:block;
+        padding: 20px 16px;
+        color: white;
+        text-decoration: none;
+    }
+	ul .active {
+		background-color:#4CAF50;
+	}
+    ul li a:hover{
+		background-color: #4CAF50;
+    }
+    @media screen and (max-width: 300px) { 
+		span.psw { 
+			display: block; 
+			float: none; 
+		} 
+	} 
+</style>
+<body >
+    <div>
+        <h1 style="text-align:center;width:100%;background-color:orange;line-height:70px;margin:0px;">Welcome
+            <% if(username) { %><%= username %><% } else { %><%= msg  %><% } %></h1>
+
+    </div>
+    <div style="height:70px;">
+        <div>
+            <ul>
+              <li><a href="/homepage" class="active"><i class="fa fa-home" style="font-size:22px;"></i>&nbsp;&nbsp;<font style="font-size:20px;">Home</font></a>
+                </li>
+                <li><a href="/add-category"><i class="fa fa-list" style="font-size:22px;"></i>&nbsp;&nbsp;<font style="font-size:20px;">AddCategory</font></a>
+                </li>
+              <li><a href="/profilepage">
+              <i class="fa fa-address-card" style="font-size:20px;"></i>&nbsp;&nbsp;<font  style="font-size:20px;">Profile</font></a></li>
+              <% if(username){ %>
+                <li style="float:right"><a href="/log-me-out">
+                  <i class="fa fa-sign-out" style="font-size:20px;"></i>&nbsp;&nbsp;<font style="font-size:20px;">Logout</font></a></li>
+              <% } else { %>
+                  <li style="float:right"><a href="/sellerlogin">
+                      <i class="fa fa-lock" style="font-size:20px;"></i>&nbsp;&nbsp;<font style="font-size:20px;">Login</font></a></li>        
+                 <% } %>
+                </ul>
+            </div>
+
+
+            <div>
+                <center>
+                <form action="/searchproduct" method="post">
+                    <input type="text" name="user" id="searchName" style="line-height: 27px;border: 2px solid red; border-radius:10px;" placeholder="Enter Product Name">
+                    <input class="delete_btn" type="submit" style="font-size:15px; background-color: green;" name="sub" value="Search">
+                </form>
+                </center>
+            </div>
+            <div style="border:2px solid #4CAF50; margin:5px auto; width:90%; box-shadow: 20px 20px 20px 20px #4CAF50; border-radius:10px;">
+                <table id="userinfo" style="width:100%; margin:2px auto; font-size:21px;">
+                    <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Product</th>
+                        <th>Brand</th>
+                        <th>Price</th>
+                        <th>Description</th>
+                        <th>Image</th>
+                        <th colspan="2">Action</th>
+                        </tr>
+                    </thead>
+                    <% if(records){ %><% records.forEach(function(rows){ %>
+                    <tbody style="text-align: center;">
+                        <td ><%= rows.Category %></td>
+                        <td ><%= rows.Product %></td>
+                        <td ><%= rows.Brand %></td>
+                        <td ><%= rows.Price %></td>
+                        <td style="width:270px;height:100px; display:inline-block; overflow:auto;"><%= rows.Description %></td>
+                        <% if(rows.Image) { %>
+                        <td ><img src="/Uploads/<%= rows.Image %>" alt="Product Image"  style="width: 170px;height: 110px;"></img></td>
+                       <% } else { %>
+                        <td><img src=""></img></td>
+                        <% } %>
+                        <td><a href="/deletecat/<%= rows._id %>"><button style="background-color:red; font-size:15px;" value="DELETE" name="delete_btn" class="delete_btn"><b>DELETE</b></button></a></td>
+                        <td><a href="/editbtn/<%= rows._id %>"><button style="background-color:Green; font-size:15px;" value="EDIT" name="update_btn" class="delete_btn"><b>EDIT</b></button></a></td>
+                    </tr>
+                    </tbody>
+                    <% })} %>
+                </table>
+            </div>
+</div>
+<script>
+    $(function(){
+        $('#searchName').autocomplete({
+            source:function(req,res){
+                $.ajax({
+                    url:'auto/',
+                    dataType:'jsonp',
+                    type:'GET',
+                    data:req,
+                    success:function(data){
+                        res(data);
+                    },
+                    error:function(err){
+                        res.json('Error In Search');
+                    }
+                });
+            },
+            /*
+            minLength:1,
+            select: function(event,ui){
+                if(ui.item){
+                    $('#searchName').val(ui.item.label);
+                }
+            }
+            */
+        });
+
+    });
+</script>
+</body>
+</html>

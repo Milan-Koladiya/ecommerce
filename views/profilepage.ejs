@@ -1,0 +1,197 @@
+<html>
+    <head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<!--
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
+-->
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<meta name="Keywords" content="Online Shopping in India,online Shopping store,Online Shopping Site,Buy Online,Shop Online,Online Shopping,Shop Now">
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="Description" content="India's biggest online store for Mobiles, Fashion (Clothes/Shoes), Electronics, Home Appliances, Books, Home, Furniture, Grocery, Jewelry, Sporting goods, Beauty & Personal Care and more! 
+		Find the largest selection from all brands at the lowest prices in India. Payment options - COD, EMI, Credit card, Debit card &amp; more.">
+</head>
+<title>Online Shopping in India,online Shopping store,Online Shopping Site,Buy Online,Shop Online,Online Shopping,Shop Now</title>
+<style>
+    input[type=text], 
+	input[type=password] { 
+		width: 100%; 
+		padding: 12px 20px; 
+		margin: 8px 0; 
+		display: inline-block; 
+		border: 1px solid #ccc; 
+		box-sizing: border-box; 
+	}
+    .sub_btn{ 
+		background-color: #4CAF50; 
+		color: white;
+		padding: 10px 20px; 
+		margin: 0 auto; 
+		border: none; 
+		cursor: pointer; 
+		width: 100%;
+	}
+	.sub_btn:hover { 
+		opacity: 0.8; 
+	} 
+    .container { 
+		padding: 6px; 
+		width:500px;
+		margin:3px auto;
+		border:8px solid #2c3e50;
+		border-radius:10px;
+		box-shadow: 20px 20px 20px 20px #4CAF50;
+		background-color:white;
+	} 
+	@media screen and (max-width: 300px) { 
+		span.psw { 
+			display: block; 
+			float: none; 
+		} 
+	}
+			table td a
+		{
+			text-decoration:none;
+		}
+		table td a:hover
+		{
+			border-bottom:1px solid white;
+		}	
+		form #text input
+		{
+			color:red;
+			font-weight:bold;
+		}
+		form #text input:hover
+		{
+			border-bottom:2px solid red;
+			color:black;
+		}
+		form #button:hover
+		{
+			border:2px solid red;
+        }   
+                .delete_btn{
+                color: white;
+                padding: 6px 5px; 
+                margin: 5px auto; 
+                border: 2px solid black;
+                border-radius:10px;
+                cursor: pointer; 
+                width: 80px;
+                }
+                .delete_btn:hover{
+                    opacity:0.8;
+                }
+                    table td a
+                {
+                    text-decoration:none;
+                }
+                table td a:hover
+                {
+                    border-bottom:1px solid white;
+                }
+            ul{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            background: #555555;
+            }
+            ul li{
+                display: inline-block;
+                position : relative;
+                text-align: left;
+            }
+            ul li a{
+                display:block;
+                padding: 20px 16px;
+                color: white;
+                text-decoration: none;
+            }
+            ul .active {
+                background-color:#4CAF50;
+            }
+            ul li a:hover{
+                background-color: #4CAF50;
+            }
+</style>
+<script type="text/javascript">
+    function onover()
+    {
+        var x=document.getElementById('p1');
+        if(x.type=="password")	 
+        {
+            x.type="text";
+        }
+    }
+    function onout()
+    {
+        var y=document.getElementById('p1');
+        if(y.type=="text")
+        {
+            y.type="password";
+        }
+    }
+    </script>
+<body style="width:98%">
+    <div>
+        <h1 style="text-align:center;width:100%;background-color:orange;line-height:70px;margin:0px;">Welcome
+            <% if(username) { %><%= username %><% } else { %><%= msg  %><% } %></h1>
+
+    </div>
+    <div style="height:70px;">
+        <div>
+            <ul>
+              <li><a href="/homepage" ><i class="fa fa-home" style="font-size:22px;"></i>&nbsp;&nbsp;<font style="font-size:20px;">Home</font></a>
+                </li>
+                <li><a href="/add-category"><i class="fa fa-list" style="font-size:22px;"></i>&nbsp;&nbsp;<font style="font-size:20px;">AddCategory</font></a>
+                </li>
+              <li><a href="/profilepage" class="active">
+              <i class="fa fa-address-card" style="font-size:20px;"></i>&nbsp;&nbsp;<font  style="font-size:20px;">Profile</font></a></li>
+              <% if(username){ %>
+                <li style="float:right"><a href="/log-me-out">
+                  <i class="fa fa-sign-out" style="font-size:20px;"></i>&nbsp;&nbsp;<font style="font-size:20px;">Logout</font></a></li>
+              <% } else { %>
+                  <li style="float:right"><a href="/sellerlogin">
+                      <i class="fa fa-lock" style="font-size:20px;"></i>&nbsp;&nbsp;<font style="font-size:20px;">Login</font></a></li>        
+                 <% } %>
+                </ul>
+            </div>
+</div>
+<div> 
+    <div class="container">
+    <div class="container">
+    <form action="/profilepage" method="POST"> 
+            <div id="text">
+            <h1><center>Profile page</center></h1>
+            <label><b>Fullname:</b></label> <br>
+            <input type="text" placeholder="Your Fullname" value="<% if(fullname) {%><%= fullname %><% } %><% if(msgg) { %><%= msgg %><% } %>" name="fullname" required><br>			
+            <label><b>Username:</b></label> <br>
+            <input type="text" placeholder="Your Username" readonly="readonly" value="<% if(username) {%><%= username %><% } %><% if(msgg) { %><%= msgg %><% } %>" name="username"><br>
+            <label><b>Emailid:</b></label> &nbsp
+            <input type="text" placeholder="Your emailid" value="<% if(emailid) {%><%= emailid %><% } %><% if(msgg) { %><%= msgg %><% } %>" name="emailid" id="mn" required><br>
+            <label><b>xender:</b></label>&nbsp
+            <input type="radio" name="xender" value="Male" <% if(xender=="Male"){ %> checked <% } %>>Male
+            <input type="radio" name="xender" value="Female" <% if(xender=="Female"){ %> checked <% } %>>Female<br><br>
+            <label><b>Qulification:</b></label>&nbsp&nbsp&nbsp;
+            <select value="Qulification" style="color: red;font-family:Bold" name="qulification" required>
+                <option <% if(qualification=='MBA') { %> selected <% } %>>MBA</option>
+                <option <% if(qualification=='BSC(IT)') { %> selected <% } %>>BSC(IT)</option>
+                <option <% if(qualification=='BE') { %> selected <% } %>>BE</option>
+                <option <% if(qualification=='B.COM') { %> selected <% } %>>B.COM</option>
+            </select><br><br>
+            <label><b>Password:</b><label> <br>
+                <input type="password" onmouseover="onover()" onmouseout="onout()" id="p1" 
+                value="<% if(password) { %><%= password %><% } %><% if(msgg) { %><%= msgg %><% } %>" placeholder="Your Password" name="password" required><br>
+            </div>
+            <div id="button">
+            <input type="submit" value="Update" id="button" name="update_btn" style="font-size:20px" class="sub_btn">
+            </div>
+    </form>  
+    </div>
+    </div>
+ </div>
+ </body>
+ </html>

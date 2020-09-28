@@ -1,0 +1,73 @@
+<html>
+<head>
+  <meta name="Keywords" content="Online Shopping in India,online Shopping store,Online Shopping Site,Buy Online,Shop Online,Online Shopping,Shop Now">
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="Description" content="India's biggest online store for Mobiles, Fashion (Clothes/Shoes), Electronics, Home Appliances, Books, Home, Furniture, Grocery, Jewelry, Sporting goods, Beauty & Personal Care and more! 
+		Find the largest selection from all brands at the lowest prices in India. Payment options - COD, EMI, Credit card, Debit card &amp; more.">
+</head>
+<title>You Can See All Added Product Here</title>
+<style>
+		.delete_btn{
+		color: white;
+		padding: 10px 20px; 
+		margin: 5px auto; 
+		border: 2px solid black;
+		border-radius:10px;
+		cursor: pointer; 
+		width: 100px;
+		}
+		.delete_btn:hover{
+			opacity:0.8;
+		}
+</style>
+<body>
+    <div>
+        <h1 style="text-align:center;width:100%;background-color:orange;line-height:70px;margin:0px;">Welcome
+            <% if(username) { %><%= username %><% } else { %><%= msg  %><% } %></h1>
+
+    </div>
+    <% if(msgg) { %>
+        <script type="text/javascript">
+            alert('You are not Login');
+        </script>
+        <a href="/shopnow/user/login-page"><button style="background-color:#4CAF50; font-size:15px; width:300px;" class="delete_btn"><b>Click Here To Login</b></button></a>
+    <% } %>
+    <div  style="border:2px solid #4CAF50; border-collapse: collapse; margin:5px auto; width:70%; box-shadow: 20px 20px 20px 20px #4CAF50; border-radius:10px;">			 
+        <table style="width:100%; margin:2px auto; font-size:21px;">
+        <tr style="border:2px solid black;">
+        <th>Index</th>
+        <th>Product</th>
+        <th>Qty</th>
+        <th>price</th>
+        <th>Subtotal</th>
+        <th>Image</th>
+        <th colspan="2">Remove/Add item</th>
+        </tr>
+        <tr></tr> <tr></tr> <tr></tr> <tr></tr> <tr></tr>
+        <% var i=0 %>
+        <% var a=0 %>
+        <% if(record){record.forEach(row=>{ %>
+        <% i++ %>
+    <tr style="text-align:center; border:2px solid black;">
+    <td><%= i %></td>
+    <td><%= row.Product %></td>
+    <td><%= qty[a] %></td>
+    <td><%= row.Price %></td>
+    <td><%= (qty[a]*row.Price) %></td>
+    <td><img src="/Uploads/<%= row.Image %>" width="170px" height="110px"></td>
+    <td><a href="/remove/<%= [a] %>"><button style="background-color:red; font-size:15px;" class="delete_btn"><b>Remove Item</b></button></td>
+    <td><a href="/shopnow/user/home"><button style="background-color:green; font-size:15px;" class="delete_btn"><b>Buy Item</b></button></td>
+    </tr>
+    <% a++ %>
+    <% })} %>
+    <% if(record){%>
+    <tr style="text-align:center;">
+        <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+        <td><a href="/shopnow/user/address/<%= a %>"><button style="background-color:yellowgreen; color:black; width:auto;margin-top:20px;font-size:15px;" class="delete_btn"><b>CheackOut</b></button></a></td>  
+    </tr>
+    <% } %>
+    </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+[{
+  "_id": {
+    "$oid": "5ed78974c36eff353027d5ac"
+  },
+  "Fullname": "Milan Koladiya",
+  "Username": "milan",
+  "Emailid": "milan111@gmail.com",
+  "Xender": "Male",
+  "Qualification": "BSC(IT)",
+  "Password": "7069",
+  "Date": {
+    "$date": "2020-06-03T11:28:52.819Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5ed7965037a7eb4eb4c0dbdb"
+  },
+  "Fullname": "Piyush Koladiya",
+  "Username": "piyush",
+  "Emailid": "piyushkoladiya111@gmail.com",
+  "Xender": "Male",
+  "Qualification": "MBA",
+  "Password": "9512",
+  "Date": {
+    "$date": "2020-06-03T12:23:44.348Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5ed7a1307bf8bb1cb071fc61"
+  },
+  "Fullname": "Harshil Koladiya",
+  "Username": "harshil",
+  "Emailid": "harshil111@gmail.com",
+  "Xender": "Male",
+  "Qualification": "MBA",
+  "Password": "7069",
+  "Date": {
+    "$date": "2020-06-03T13:10:08.605Z"
+  },
+  "__v": 0
+}]

@@ -1,0 +1,57 @@
+[{
+  "_id": {
+    "$oid": "5ed6a41a8836aa3da0e0ddeb"
+  },
+  "Fullname": "Koladiya Milan",
+  "Username": "Milan",
+  "Emailid": "milan555@gmail.com",
+  "Xender": "Male",
+  "Qualification": "BSC(IT)",
+  "Password": "7069",
+  "Date": {
+    "$date": "2020-06-02T19:10:18.824Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5ed79513aa3d2f381c98018e"
+  },
+  "Fullname": "Koladiya Bhautik",
+  "Username": "Bhautik",
+  "Emailid": "bhautik111@gmail.com",
+  "Xender": "Male",
+  "Qualification": "MBA",
+  "Password": "7600",
+  "Date": {
+    "$date": "2020-06-03T12:18:27.894Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5ed7a1327bf8bb1cb071fc62"
+  },
+  "Fullname": "Koladiya Harshil",
+  "Username": "Harshil",
+  "Emailid": "harshil111@gmail.com",
+  "Xender": "Male",
+  "Qualification": "MBA",
+  "Password": "7069",
+  "Date": {
+    "$date": "2020-06-03T13:10:10.853Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5ee37e4efa7e3e1eb0372cb2"
+  },
+  "Fullname": "Koladiya Elesh",
+  "Username": "Elesh",
+  "Emailid": "elsesh222@gmail.com",
+  "Xender": "Male",
+  "Qualification": "MBA",
+  "Password": "7069",
+  "Date": {
+    "$date": "2020-06-12T13:08:30.042Z"
+  },
+  "__v": 0
+}]
